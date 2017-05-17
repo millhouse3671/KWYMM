@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<audio id="player" controls preload hidden
+	<source src="Audio\Wrong.wav" type="audio/wav">
+</audio>
+
+<audio id="player2" controls preload hidden autoplay
+	<source src="Audio\Here Comes the Sun.mp3" type="audio/mp3">
+</audio>
+
+
+<h1>Look where we keep the 4th sink</h1>
+
+<hr>
+
+<!-- Input Box -->
+<input id="p4Input" type="text" class="input" autofocus>
+
+<br>
+
+<!--Button -->
+<button class="button2"
+onclick="p4Function()"><b>Try it</b></button>
+
+<script>
+function p4Function() {
+    var guess = document.getElementById("p4Input").value;
+
+    // If the guess is "LOVE" (case insensitive)
+   if (guess.toLowerCase() === "LOVE".toLowerCase()) {
+        window.location.href = "q4.htm"; 
+	}	
+    // If the guess is anything else
+	else {
+        document.getElementById('player').play();
+    }
+}
+</script>
+
+<button class="invisButton"
+onclick="location.href='q4.htm';"> 
+</button>
+
+</body>
+</html> 

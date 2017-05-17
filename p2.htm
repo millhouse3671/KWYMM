@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<audio id="player" controls preload hidden
+	<source src="Audio\Wrong.wav" type="audio/wav">
+</audio>
+
+
+<audio id="player2" controls preload autoplay
+	<source src="Audio\Gaye.mp3" type="audio/mp3">
+</audio>
+
+
+<h1>Go to where we spend almost every night together</h1>
+
+<hr>
+
+<!-- Input Box -->
+<input id="p2Input" type="text" class="input" autofocus>
+
+<br>
+
+<!--Button -->
+<button class="button2"
+onclick="p2Function()"><b>Try it</b></button>
+
+<script>
+function p2Function() {
+    var guess = document.getElementById("p2Input").value;
+
+    // If the guess is "06/09/2009 or a variation of"
+    if (guess === "06/09/2009") {
+        window.location.href = "q2.htm";
+	}
+	else if (guess === "6/9/09") {
+        window.location.href = "q2.htm";
+	}
+	else if (guess === "06/09/09") {
+        window.location.href = "q2.htm";
+	}
+	else if (guess === "6/9/2009") {
+        window.location.href = "q2.htm";
+	} 
+    // If the guess is anything else
+     else {
+        document.getElementById('player').play();
+    }
+}
+</script>
+
+<button class="invisButton"
+onclick="location.href='q2.htm';"> 
+</button>
+
+</body>
+</html> 

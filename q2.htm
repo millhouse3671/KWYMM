@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<audio id="player" controls preload hidden
+	<source src="Audio\Wrong.wav" type="audio/wav">
+</audio>
+
+<h1>My favorite type of water is <q>____ water</q></h1>
+
+<hr>
+
+<!-- Input Box -->
+<input id="q2Input" type="text" class="input" autofocus>
+
+<br>
+
+<!--Button -->
+<button class="button2"
+onclick="q2Function()"><b>Try it</b></button>
+
+<script>
+function q2Function() {
+    var guess = document.getElementById("q2Input").value;
+
+    // If the guess is "Panda" (case insensitive)
+    if (guess.toLowerCase() === "Panda".toLowerCase()) {
+        window.location.href = "p3.htm";
+        
+    // If the guess is anything else
+    } else {
+        document.getElementById('player').play();
+		//window.alert("Wrong");
+    }
+}
+</script>
+
+<button class="invisButton"
+onclick="location.href='p3.htm';"> 
+</button>
+
+</body>
+</html> 

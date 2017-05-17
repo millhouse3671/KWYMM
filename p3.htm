@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<audio id="player" controls preload hidden
+	<source src="Audio\Wrong.wav" type="audio/wav">
+</audio>
+
+
+<audio id="player2" controls preload autoplay
+	<source src="Audio\In Your Eyes.mp3" type="audio/mp3">
+</audio>
+
+
+<h1>Under what we eat dinner together on</h1>
+
+<hr>
+
+<!-- Input Box -->
+<input id="p3Input" type="text" class="input" autofocus>
+
+<br>
+
+<!--Button -->
+<button class="button2"
+onclick="p3Function()"><b>Try it</b></button>
+
+<script>
+function p3Function() {
+    var guess = document.getElementById("p3Input").value;
+
+    // If the guess is "Chili's or Chilis" (case insensitive)
+   if (guess.toLowerCase() === "Chilis".toLowerCase()) {
+        window.location.href = "q3.htm"; 
+	}	
+	else if (guess.toLowerCase() === "Chili's".toLowerCase()) {
+        window.location.href = "q3.htm"; 
+	}	
+    // If the guess is anything else
+	else {
+        document.getElementById('player').play();
+    }
+}
+</script>
+
+<button class="invisButton"
+onclick="location.href='q3.htm';"> 
+</button>
+
+</body>
+</html> 

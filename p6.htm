@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<audio id="player" controls preload hidden
+	<source src="Audio\Wrong.wav" type="audio/wav">
+</audio>
+
+
+<audio id="player2" controls preload hidden autoplay
+	<source src="Audio\Keep on Loving You.mp3" type="audio/mp3">
+</audio>
+
+
+<h1>Go to where we sat with our Silver Dipper on July 4th</h1>
+
+<hr>
+
+<!-- Input Box -->
+<input id="p6Input" type="text" class="input" autofocus>
+
+<br>
+
+<!--Button -->
+<button class="button2"
+onclick="p6Function()"><b>Try it</b></button>
+
+<script>
+function p6Function() {
+    var guess = document.getElementById("p6Input").value;
+
+    // If the guess is "4/28/09 or a variation of"
+    if (guess === "04/28/09") {
+        window.location.href = "q6.htm";
+	}
+	else if (guess === "4/28/09") {
+        window.location.href = "q6.htm";
+	}
+	else if (guess === "04/28/2009") {
+        window.location.href = "q6.htm";
+	}
+	else if (guess === "4/28/2009") {
+        window.location.href = "q6.htm";
+	} 
+	else if (guess === "4/16/09") {
+        window.location.href = "q6.htm";
+	}
+	else if (guess === "4/16/2009") {
+        window.location.href = "q6.htm";
+	}
+    // If the guess is anything else
+     else {
+        document.getElementById('player').play();
+    }
+}
+</script>
+
+<button class="invisButton"
+onclick="location.href='q6.htm';"> 
+</button>
+
+
+</body>
+</html> 

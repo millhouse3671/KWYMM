@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<audio id="player" controls preload hidden
+	<source src="Audio\Wrong.wav" type="audio/wav">
+</audio>
+
+
+<audio id="player2" controls preload hidden autoplay
+	<source src="Audio\Louie.mp3" type="audio/mp3">
+</audio>
+
+<h1>Look inside what we brought our big bopper back in</h1>
+
+<hr>
+
+<!-- Input Box -->
+<input id="p5Input" type="text" class="input" autofocus>
+
+<br>
+
+<!--Button -->
+<button class="button2"
+onclick="p5Function()"><b>Try it</b></button>
+
+<script>
+function p5Function() {
+    var guess = document.getElementById("p5Input").value;
+
+    // If the guess is "Oscar" (case insensitive)
+   if (guess.toLowerCase() === "Oscar".toLowerCase()) {
+        window.location.href = "q5.htm"; 
+	}	
+    // If the guess is anything else
+	else {
+        document.getElementById('player').play();
+    }
+}
+</script>
+
+<button class="invisButton"
+onclick="location.href='q5.htm';"> 
+</button>
+
+</body>
+</html> 
